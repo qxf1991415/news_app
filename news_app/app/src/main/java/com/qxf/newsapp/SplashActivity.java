@@ -13,6 +13,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.qxf.newsapp.main.MainActivity;
+
 public class SplashActivity extends AppCompatActivity {
     private MyHandler myHandler = new MyHandler();
     private TextView tv_time;
