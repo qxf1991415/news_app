@@ -3,10 +3,7 @@ package com.qxf.newsapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -16,7 +13,6 @@ import android.widget.TextView;
 import com.qxf.newsapp.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    private MyHandler myHandler = new MyHandler();
     private TextView tv_time;
     private MyCountDownTimer mc;
     private Button btn;
@@ -35,16 +31,6 @@ public class SplashActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btn);
         mc = new MyCountDownTimer(6000, 1000);
         mc.start();
-        /**
-         * 使用handler的postDelayed延迟5秒执行页面跳转
-         * （与CountDownTimer的millisInFuture一致）
-         */
-        myHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startMainActivity();
-            }
-        }, 5000);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +38,6 @@ public class SplashActivity extends AppCompatActivity {
                 startMainActivity();
             }
         });
-    }
-
-    //将Handler声明为静态内部类
-    private static class MyHandler extends Handler {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-        }
     }
 
     //页面跳转的方法
@@ -81,22 +59,18 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         public void onFinish() {
-            tv_time.setText("正在跳转");
+            startMainActivity();
         }
 
         public void onTick(long millisUntilFinished) {
             tv_time.setText(millisUntilFinished / 1000 +"");
-            Log.i("tag", "倒计时" + millisUntilFinished / 1000);
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        //闪屏页销毁时将消息对象从消息队列移除并结束倒计时
-        myHandler.removeCallbacksAndMessages(null);
         mc.cancel();
-        Log.i("tag", "destory");
     }
 
 }
