@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--自定义颜色-->
+    <color name="white">#ffffff</color>
+    <color name="blue">#303F9F</color>
+    <color name="red">#FF0000</color>
+
+
+    <!--底部tab栏按下与不按下的颜色-->
+    <color name="index_tab_color_nor">#515151</color>
+    <color name="index_tab_color_pre">#1296db</color>
+
+    <!--公共分隔线颜色-->
+    <color name="common_divider_color">#eaedf0</color>
 </resources>

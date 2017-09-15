@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">newsapp</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="tab_a">新闻</string>
+    <string name="tab_b">聊天</string>
+    <string name="tab_c">通讯录</string>
+    <string name="tab_d">发现</string>
+    <string name="tab_e">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

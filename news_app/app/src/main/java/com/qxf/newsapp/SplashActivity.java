@@ -1,18 +1,17 @@
 package com.qxf.newsapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.qxf.newsapp.main.MainActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
     private TextView tv_time;
     private MyCountDownTimer mc;
     private Button btn;
@@ -24,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //去标题状态栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
 
         tv_time = (TextView) findViewById(R.id.tv_time);
