@@ -8,7 +8,15 @@ import android.view.ViewGroup;
 
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.utils.BaseSupportFragment;
+import com.qxf.newsapp.utils.GlideImageLoader;
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -16,6 +24,10 @@ import butterknife.ButterKnife;
  */
 
 public class NewsFrgment extends BaseSupportFragment {
+    private List<String> images;
+
+    @BindView(R.id.banner)
+    Banner banner;
 
     @Nullable
     @Override
@@ -23,6 +35,28 @@ public class NewsFrgment extends BaseSupportFragment {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
         view.setOnTouchListener(new DontSpillOnTouchListener());
         ButterKnife.bind(this, view);
+        initBanner();
         return view;
+    }
+
+    private void initBanner() {
+        images = new ArrayList<>();
+        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114150030_0003.png");
+        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145642_5831.png");
+        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145705_0472.png");
+        //设置图片加载器
+        banner.setImageLoader(new GlideImageLoader());
+        //设置图片集合
+        banner.setImages(images);
+        //设置banner动画效果
+        banner.setBannerAnimation(Transformer.Accordion);
+        //设置自动轮播，默认为true
+        banner.isAutoPlay(true);
+        //设置轮播时间
+        banner.setDelayTime(3000);
+        //设置指示器位置（当banner模式中有指示器时）
+        banner.setIndicatorGravity(BannerConfig.RIGHT);
+        //banner设置方法全部调用完毕时最后调用
+        banner.start();
     }
 }

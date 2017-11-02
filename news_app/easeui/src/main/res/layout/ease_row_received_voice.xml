@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
@@ -17,14 +18,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_chat_activity" >
 
-        <com.easemob.easeui.widget.EaseImageView
+        <com.hyphenate.easeui.widget.EaseImageView
             android:id="@+id/iv_userhead"
             android:layout_width="@dimen/size_avatar"
             android:layout_height="@dimen/size_avatar"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="@dimen/margin_chat_activity"
-            android:src="@drawable/ease_default_avatar" />
+            android:src="@drawable/ease_default_avatar"
+            android:scaleType="fitXY" />
 
         <RelativeLayout
             android:id="@+id/bubble"
@@ -44,14 +46,6 @@
 	            android:paddingRight="12dp"
 	            android:layout_centerInParent="true"
                 android:src="@drawable/ease_chatfrom_voice_playing" />
-	        <TextView
-	            android:id="@+id/text_hint"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-                android:gravity="center|left"
-                android:minHeight="38dp"
-	            android:textSize="14sp"
-	            android:visibility="gone"/>
         </RelativeLayout>
 
         <TextView
@@ -63,7 +57,8 @@
             android:layout_toRightOf="@id/bubble"
             android:layout_alignTop="@id/bubble"
             android:gravity="center"
-            android:text="3&apos;&apos;" />
+            android:text="3&apos;&apos;"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/iv_unread_voice"

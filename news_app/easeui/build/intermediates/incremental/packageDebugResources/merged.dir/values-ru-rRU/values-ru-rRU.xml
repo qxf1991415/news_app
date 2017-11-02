@@ -88,7 +88,6 @@
     <string name="password">Пароль</string>
     <string name="picture">[Изображение]</string>
     <string name="prompt">Оповещения</string>
-    <string name="readfire_message">[Burn After Reading] сообщение, нажмите View</string>
     <string name="recoding_fail">Сделать запись не удалось, пожалуйста, попробуйте еще раз!</string>
     <string name="recording_video">Сделать видео</string>
     <string name="register">Регистрация</string>

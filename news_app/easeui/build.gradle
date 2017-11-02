@@ -1,23 +1,44 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 20
-    }
+        minSdkVersion 14
+        targetSdkVersion 22
 
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
 }
 
 dependencies {
-    compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/glide-3.6.1.jar')
+    //release时需要把hyphenatechatsdk的依赖注释掉，sdk已经被打成jar包放在libs底下
+//    compile project(':hyphenatechatsdk')
+	//compile 'com.hyphenate:hyphenate-sdk:3.3.1'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'me.yokeyword:fragmentation:0.9.3'
+    compile 'me.yokeyword:fragmentation-swipeback:0.7.9'
 }
