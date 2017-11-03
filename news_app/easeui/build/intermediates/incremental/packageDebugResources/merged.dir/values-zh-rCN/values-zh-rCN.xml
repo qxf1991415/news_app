@@ -295,6 +295,7 @@
     <string name="video">[视频]</string>
     <string name="video_call">[视频通话]</string>
     <string name="voice">声音</string>
+    <string name="voice_and_video_conference">音视频会议</string>
     <string name="voice_call">[语音通话]</string>
     <string name="voice_prefix">[语音]</string>
     <string name="were_mentioned">[有人@我]</string>

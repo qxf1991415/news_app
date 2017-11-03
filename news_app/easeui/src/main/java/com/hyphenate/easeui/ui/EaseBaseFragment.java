@@ -10,10 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.widget.EaseTitleBar;
 
-import me.yokeyword.fragmentation.SupportFragment;
-import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
-
-public abstract class EaseBaseFragment extends SwipeBackFragment {
+public abstract class EaseBaseFragment extends Fragment{
     protected EaseTitleBar titleBar;
     protected InputMethodManager inputMethodManager;
 

@@ -38,6 +38,7 @@ import android.widget.Toast;
  * 语音row播放点击事件监听
  *
  */
+@Deprecated
 public class EaseChatRowVoicePlayClickListener implements View.OnClickListener {
 	private static final String TAG = "VoicePlayClickListener";
 	EMMessage message;
@@ -82,7 +83,7 @@ public class EaseChatRowVoicePlayClickListener implements View.OnClickListener {
 		adapter.notifyDataSetChanged();
 	}
 
-	public void playVoice(String filePath) {
+	public void  playVoice(String filePath) {
 		if (!(new File(filePath).exists())) {
 			return;
 		}
@@ -167,12 +168,33 @@ public class EaseChatRowVoicePlayClickListener implements View.OnClickListener {
 			playVoice(voiceBody.getLocalUrl());
 		} else {
 			if (message.status() == EMMessage.Status.SUCCESS) {
-				File file = new File(voiceBody.getLocalUrl());
-				if (file.exists() && file.isFile())
-					playVoice(voiceBody.getLocalUrl());
-				else
-					EMLog.e(TAG, "file not exist");
+				if(EMClient.getInstance().getOptions().getAutodownloadThumbnail()){
+					File file = new File(voiceBody.getLocalUrl());
+					if (file.exists() && file.isFile())
+						playVoice(voiceBody.getLocalUrl());
+					else
+						EMLog.e(TAG, "file not exist");
+				}else{
+					new AsyncTask<Void, Void, Void>() {
 
+						@Override
+						protected Void doInBackground(Void... params) {
+							EMClient.getInstance().chatManager().downloadAttachment(message);
+							return null;
+						}
+
+						@Override
+						protected void onPostExecute(Void result) {
+							super.onPostExecute(result);
+							adapter.notifyDataSetChanged();
+						}
+					}.execute();
+					File file = new File(voiceBody.getLocalUrl());
+					if (file.exists() && file.isFile())
+						playVoice(voiceBody.getLocalUrl());
+					else
+						EMLog.e(TAG, "file not exist");
+				}
 			} else if (message.status() == EMMessage.Status.INPROGRESS) {
 				Toast.makeText(activity, st, Toast.LENGTH_SHORT).show();
 			} else if (message.status() == EMMessage.Status.FAIL) {
@@ -194,7 +216,6 @@ public class EaseChatRowVoicePlayClickListener implements View.OnClickListener {
 				}.execute();
 
 			}
-
 		}
 	}
 }
