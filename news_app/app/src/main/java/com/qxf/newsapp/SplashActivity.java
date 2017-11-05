@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.qxf.newsapp.main.MainActivity;
+import com.qxf.newsapp.login.LoginActivity;
 
 public class SplashActivity extends Activity {
     private TextView tv_time;
@@ -41,7 +41,7 @@ public class SplashActivity extends Activity {
 
     //页面跳转的方法
     private void startMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();//完成跳转后销毁闪屏页（从栈内移除）
     }

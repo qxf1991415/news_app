@@ -45,5 +45,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     //第三方banner
     compile 'com.youth.banner:banner:1.4.10'
+    //下拉刷新上拉加载
+    compile 'com.ufo:DWRefreshLayout:0.9.4'
     compile project(':easeui')
 }

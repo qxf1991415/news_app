@@ -2,6 +2,7 @@ package com.qxf.newsapp.news;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.utils.BaseSupportFragment;
 import com.qxf.newsapp.utils.GlideImageLoader;
+import com.ufo.dwrefresh.view.DWRefreshLayout;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -23,11 +25,16 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/9/15.
  */
 
-public class NewsFrgment extends BaseSupportFragment {
+public class NewsFrgment extends BaseSupportFragment implements NewsContract.View {
     private List<String> images;
+    private NewsContract.Present present;
 
     @BindView(R.id.banner)
     Banner banner;
+    @BindView(R.id.dwRefreshLayout)
+    DWRefreshLayout dwRefreshLayout;
+    @BindView(R.id.news)
+    RecyclerView news;
 
     @Nullable
     @Override
@@ -36,7 +43,22 @@ public class NewsFrgment extends BaseSupportFragment {
         view.setOnTouchListener(new DontSpillOnTouchListener());
         ButterKnife.bind(this, view);
         initBanner();
+        initView();
         return view;
+    }
+
+    private void initView() {
+        dwRefreshLayout.setOnRefreshListener(new DWRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //刷新回调
+            }
+
+            @Override
+            public void onLoadMore() {
+                //加载更多回调
+            }
+        });
     }
 
     private void initBanner() {
@@ -58,5 +80,10 @@ public class NewsFrgment extends BaseSupportFragment {
         banner.setIndicatorGravity(BannerConfig.RIGHT);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
+    }
+
+    @Override
+    public void setPresenter(NewsContract.Present presenter) {
+        this.present = presenter;
     }
 }
