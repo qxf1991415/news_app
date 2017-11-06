@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qxf.newsapp.R;
-import com.qxf.newsapp.utils.BaseSupportFragment;
+import com.qxf.newsapp.base.BaseSupportFragment;
 
 import butterknife.ButterKnife;
 

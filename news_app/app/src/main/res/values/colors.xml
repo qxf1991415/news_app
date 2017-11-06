@@ -16,4 +16,5 @@
 
     <!--公共分隔线颜色-->
     <color name="common_divider_color">#eaedf0</color>
+    <color name="font_title">#212121</color>
 </resources>

@@ -1,10 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.qxf.newsapp.login.LoginActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="新阅"
+        android:textColor="@color/colorAccent"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:typeface="monospace"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appname"
+        android:layout_marginTop="80dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColorHint="@color/font_title"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="用户名"
+            android:inputType="text"
+            android:textColor="@color/font_title"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_user"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColorHint="@color/font_title"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/font_title"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:textColor="@color/font_title"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/regist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="注册"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="登录"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

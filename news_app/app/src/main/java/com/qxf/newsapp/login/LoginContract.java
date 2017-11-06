@@ -1,7 +1,9 @@
 package com.qxf.newsapp.login;
 
-import com.qxf.newsapp.BasePresenter;
-import com.qxf.newsapp.BaseView;
+import android.app.Activity;
+
+import com.qxf.newsapp.base.BasePresenter;
+import com.qxf.newsapp.base.BaseView;
 
 /**
  * Created by quanxiaofeng on 2017/11/5.
@@ -10,10 +12,10 @@ import com.qxf.newsapp.BaseView;
 public interface LoginContract {
 
 
-    interface View extends BaseView<LoginContract.Present>{
+    interface View extends BaseView<Presenter> {
 
     }
-    interface Present extends BasePresenter{
-
+    interface Presenter extends BasePresenter {
+        void JumpToRegist(Class<? extends Activity> clazz);
     }
 }

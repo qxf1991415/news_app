@@ -33,13 +33,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
-        android:name=".MyApplication"
+        android:name=".base.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".base.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -51,7 +51,7 @@
             android:label="@string/app_name">
         </activity>
         <activity
-            android:name=".BaseActivity"
+            android:name=".base.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme">
         </activity>
@@ -81,6 +81,8 @@
         </receiver>
 
         <activity android:name=".login.LoginActivity">
+        </activity>
+        <activity android:name=".regist.RegistActivity">
         </activity>
     </application>
 

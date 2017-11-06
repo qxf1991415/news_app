@@ -1,7 +1,7 @@
 package com.qxf.newsapp.main;
 
-import com.qxf.newsapp.BasePresenter;
-import com.qxf.newsapp.BaseView;
+import com.qxf.newsapp.base.BasePresenter;
+import com.qxf.newsapp.base.BaseView;
 
 /**
  * Created by Administrator on 2017/9/15.
@@ -9,9 +9,9 @@ import com.qxf.newsapp.BaseView;
 
 public interface MainContract {
 
-    interface MainPresent extends BasePresenter {
+    interface Present extends BasePresenter {
     }
 
-    interface MainView extends BaseView<MainPresent> {
+    interface View extends BaseView<Present> {
     }
 }

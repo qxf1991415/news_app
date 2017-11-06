@@ -1,7 +1,6 @@
 package com.qxf.newsapp.news;
 
-import com.qxf.newsapp.BasePresenter;
-import com.qxf.newsapp.BaseView;
+import com.qxf.newsapp.news.net.GetNewsInfo;
 
 /**
  * Created by quanxiaofeng on 2017/11/5.
@@ -9,11 +8,15 @@ import com.qxf.newsapp.BaseView;
 
 public interface NewsContract {
 
-    interface View extends BaseView<Present> {
+    interface View extends com.qxf.newsapp.base.BaseView<Present> {
 
     }
 
-    interface Present extends BasePresenter {
+    interface Present extends com.qxf.newsapp.base.BasePresenter {
+
+        GetNewsInfo.Request initRequest();
+
+        void getNewsData();
 
         void loadMore();
 

@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qxf.newsapp.R;
-import com.qxf.newsapp.utils.BaseSupportFragment;
+import com.qxf.newsapp.base.BaseSupportFragment;
+import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.utils.GlideImageLoader;
 import com.ufo.dwrefresh.view.DWRefreshLayout;
 import com.youth.banner.Banner;
@@ -27,7 +28,7 @@ import butterknife.ButterKnife;
 
 public class NewsFrgment extends BaseSupportFragment implements NewsContract.View {
     private List<String> images;
-    private NewsContract.Present present;
+    private NewsPresent newsPresent;
 
     @BindView(R.id.banner)
     Banner banner;
@@ -43,6 +44,7 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         view.setOnTouchListener(new DontSpillOnTouchListener());
         ButterKnife.bind(this, view);
         initBanner();
+        newsPresent = new NewsPresent(this, this.getActivity(), AppInjection.provideGetNewsInfo());
         initView();
         return view;
     }
@@ -66,10 +68,9 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114150030_0003.png");
         images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145642_5831.png");
         images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145705_0472.png");
-        //设置图片加载器
-        banner.setImageLoader(new GlideImageLoader());
         //设置图片集合
         banner.setImages(images);
+        banner.setImageLoader(new GlideImageLoader());
         //设置banner动画效果
         banner.setBannerAnimation(Transformer.Accordion);
         //设置自动轮播，默认为true
@@ -80,10 +81,5 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         banner.setIndicatorGravity(BannerConfig.RIGHT);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
-    }
-
-    @Override
-    public void setPresenter(NewsContract.Present presenter) {
-        this.present = presenter;
     }
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
+            "outputFile": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\values-mk-rMK\\values-mk-rMK.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-mk-rMK\\values-mk-rMK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

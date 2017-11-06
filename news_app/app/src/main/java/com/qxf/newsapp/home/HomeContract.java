@@ -1,8 +1,7 @@
 package com.qxf.newsapp.home;
 
-import com.qxf.newsapp.BasePresenter;
-import com.qxf.newsapp.BaseView;
-import com.qxf.newsapp.news.NewsContract;
+import com.qxf.newsapp.base.BasePresenter;
+import com.qxf.newsapp.base.BaseView;
 
 /**
  * Created by quanxiaofeng on 2017/11/5.
@@ -11,10 +10,10 @@ import com.qxf.newsapp.news.NewsContract;
 public interface HomeContract {
 
 
-    interface View extends BaseView<NewsContract.Present>{
+    interface View extends BaseView<Present> {
 
     }
-    interface Present extends BasePresenter{
+    interface Present extends BasePresenter {
 
     }
 }

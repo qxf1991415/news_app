@@ -10,8 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.qxf.newsapp.BaseActivity;
 import com.qxf.newsapp.R;
+import com.qxf.newsapp.base.BaseActivity;
 import com.qxf.newsapp.find.FindFrgment;
 import com.qxf.newsapp.frends.FrendsFrgment;
 import com.qxf.newsapp.home.HomeFrgment;
