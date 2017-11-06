@@ -2,6 +2,9 @@ package com.qxf.newsapp.news;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,13 +46,13 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         View view = inflater.inflate(R.layout.fragment_news, container, false);
         view.setOnTouchListener(new DontSpillOnTouchListener());
         ButterKnife.bind(this, view);
-        initBanner();
         newsPresent = new NewsPresent(this, this.getActivity(), AppInjection.provideGetNewsInfo());
+        initData();
         initView();
         return view;
     }
 
-    private void initView() {
+    private void initData() {
         dwRefreshLayout.setOnRefreshListener(new DWRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -61,6 +64,14 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
                 //加载更多回调
             }
         });
+    }
+
+    private void initView() {
+        initBanner();
+        news.setLayoutManager(new LinearLayoutManager(getActivity()));
+        news.setAdapter(new NewsAdapter());
+        news.setItemAnimator(new DefaultItemAnimator());
+        news.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL));
     }
 
     private void initBanner() {
