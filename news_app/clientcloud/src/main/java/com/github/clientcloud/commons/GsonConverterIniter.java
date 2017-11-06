@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description gson解析器
  * @date 2017/9/19
  */

@@ -3,7 +3,7 @@ package com.github.clientcloud;
 import android.content.Context;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description 初始化接口
  * @date 2017/9/15
  */

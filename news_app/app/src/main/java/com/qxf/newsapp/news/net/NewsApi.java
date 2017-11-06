@@ -14,6 +14,6 @@ public interface NewsApi {
 
     String BASE_URL = "http://api.avatardata.cn/GuoNeiNews/Query/";
 
-    @GET
+    @GET("/")
     Observable<NewsInfo> getNewsInfoByPageCount(@Query("key") String key, @Query("page") int page, @Query("rows") int rows);
 }

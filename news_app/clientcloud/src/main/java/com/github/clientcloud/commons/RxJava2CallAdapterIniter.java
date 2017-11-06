@@ -10,7 +10,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description
  * @date 2017/9/19
  */

@@ -16,7 +16,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description
  * @date 2017/9/15
  */

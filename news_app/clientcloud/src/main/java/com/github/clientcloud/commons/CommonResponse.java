@@ -1,7 +1,7 @@
 package com.github.clientcloud.commons;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description
  * @date 2017/9/21
  */

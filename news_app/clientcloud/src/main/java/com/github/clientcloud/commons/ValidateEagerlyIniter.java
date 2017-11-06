@@ -8,7 +8,7 @@ import com.github.clientcloud.RetrofitIniter;
 import retrofit2.Retrofit;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description
  * @date 2017/9/19
  */

@@ -8,7 +8,7 @@ import com.github.clientcloud.OkhttpIniter;
 import okhttp3.OkHttpClient;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description
  * @date 2017/9/19
  */

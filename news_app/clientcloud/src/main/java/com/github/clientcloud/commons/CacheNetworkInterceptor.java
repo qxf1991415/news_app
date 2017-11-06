@@ -11,7 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * @author zhangyb
+ * @author quanxf
  * @description 网络请求状态
  * @date 2017/9/20
  */

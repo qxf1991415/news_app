@@ -84,6 +84,13 @@
         </activity>
         <activity android:name=".regist.RegistActivity">
         </activity>
+
+        <meta-data
+            android:name="APP_ID"
+            android:value="GIT_HUB"/>
+        <meta-data
+            android:name="APP_KEY"
+            android:value="123456a2b3cd5efg"/>
     </application>
 
 </manifest>
