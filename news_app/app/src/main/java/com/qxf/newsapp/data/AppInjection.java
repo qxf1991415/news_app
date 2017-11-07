@@ -1,7 +1,7 @@
 package com.qxf.newsapp.data;
 
-import com.qxf.newsapp.login.LoginDataSource;
-import com.qxf.newsapp.login.LoginRepository;
+import com.qxf.newsapp.data.userdata.UserDataRepository;
+import com.qxf.newsapp.data.userdata.UserDataSource;
 import com.qxf.newsapp.news.net.GetNewsInfo;
 import com.qxf.newsapp.news.net.NewsDataRepository;
 import com.qxf.newsapp.news.net.NewsDataSource;
@@ -13,8 +13,8 @@ import com.qxf.newsapp.news.net.NewsDataSource;
 
 public class AppInjection {
 
-    public static LoginDataSource provideLoginDataSource() {
-        return new LoginRepository();
+    public static UserDataSource provideUserDataSource() {
+        return new UserDataRepository();
     }
 
     public static NewsDataSource provideNewsDataSource() {

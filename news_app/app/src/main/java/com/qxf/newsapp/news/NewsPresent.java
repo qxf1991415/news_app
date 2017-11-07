@@ -4,7 +4,10 @@ import android.content.Context;
 
 import com.qxf.newsapp.news.net.GetNewsInfo;
 import com.qxf.newsapp.news.net.GetNewsInfo.Request;
+import com.qxf.newsapp.news.net.beans.NewsInfo;
 import com.qxf.newsapp.news.net.beans.NewsReauest;
+
+import java.util.List;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -36,7 +39,7 @@ public class NewsPresent implements NewsContract.Present {
         this.newsView = newsView;
         this.context = context;
         this.getNewsInfo = getNewsInfo;
-        newsReauest.setKey("cd5f3279663346149c9f7fbbee54a726");
+        newsReauest.setKey("684265f995f94eb2b36380a5f66bf807");
         compositeDisposable = new CompositeDisposable();
     }
 
@@ -67,7 +70,8 @@ public class NewsPresent implements NewsContract.Present {
 
                     @Override
                     public void onNext(GetNewsInfo.Response response) {
-
+                        List<NewsInfo.ResultBean> newsInfos = response.getNewsInfo().getResult();
+                        newsView.setData(newsInfos);
                     }
 
                     @Override
@@ -81,6 +85,12 @@ public class NewsPresent implements NewsContract.Present {
                     }
                 });
     }
+
+    interface LoadFinish{
+        void LoadEnd();
+    }
+
+
 
     @Override
     public void loadMore() {

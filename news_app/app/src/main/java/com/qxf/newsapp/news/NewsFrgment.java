@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.BaseSupportFragment;
 import com.qxf.newsapp.data.AppInjection;
+import com.qxf.newsapp.news.net.beans.NewsInfo;
 import com.qxf.newsapp.utils.GlideImageLoader;
 import com.ufo.dwrefresh.view.DWRefreshLayout;
 import com.youth.banner.Banner;
@@ -32,6 +33,7 @@ import butterknife.ButterKnife;
 public class NewsFrgment extends BaseSupportFragment implements NewsContract.View {
     private List<String> images;
     private NewsPresent newsPresent;
+    private List<NewsInfo> newsInfos = new ArrayList<>();
 
     @BindView(R.id.banner)
     Banner banner;
@@ -53,6 +55,7 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     }
 
     private void initData() {
+        newsPresent.getNewsData();
         dwRefreshLayout.setOnRefreshListener(new DWRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -92,5 +95,10 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         banner.setIndicatorGravity(BannerConfig.RIGHT);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
+    }
+
+    @Override
+    public void setData(List<NewsInfo.ResultBean> newsInfos) {
+
     }
 }

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.0.aar\\ffbf8b834a08d6373e3b212666465db0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_app_panel_video_icon.9.png.flat",
@@ -44,24 +44,24 @@
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_commom_back_btn.xml"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ease_chat_location_pressed.png.flat",
-        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ease_chat_location_pressed.png"
-    },
-    {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_row_big_expression.xml.flat",
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ease_chat_location_pressed.png.flat",
+        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ease_chat_location_pressed.png"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ease_delete_expression.png.flat",
@@ -184,12 +184,12 @@
         "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ease_dot_emojicon_unselected.png"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_chatting_biaoqing_btn_enable.png.flat",
-        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_enable.png"
-    },
-    {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_chatting_biaoqing_btn_enable.png.flat",
+        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_enable.png"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_abc_slide_out_top.xml.flat",
@@ -256,20 +256,20 @@
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_type_select_btn_pressed.png"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_ratingbar_material.xml.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable\\abc_ratingbar_material.xml"
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_chronometer.xml.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_ratingbar_material.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -428,16 +428,16 @@
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.0.aar\\68f1cd73224278e434bed3a3c4809063\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_push_bottom_out.xml.flat",
         "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\push_bottom_out.xml"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_btn_default_mtrl_shape.xml.flat",
@@ -504,12 +504,12 @@
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ease_chat_send_btn_normal.9.png"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color_abc_tint_btn_checkable.xml.flat",
+        "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -520,12 +520,12 @@
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_type_select_btn.xml"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_row_received_picture.xml.flat",
         "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+    },
+    {
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -576,36 +576,36 @@
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_row_sent_picture.xml.flat",
-        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_settings_normal.png.flat",
+        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_settings_normal.png"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_settings_normal.png.flat",
-        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_settings_normal.png"
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_row_sent_picture.xml.flat",
+        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ease_search_clear_pressed.png.flat",
         "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_search_clear_pressed.png"
     },
     {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_ease_mm_listitem_grey.xml.flat",
-        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem_grey.xml"
-    },
-    {
-        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_ease_sidebar_background_pressed.xml.flat",
-        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_sidebar_background_pressed.xml"
+        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_chat_message_list.xml.flat",
+        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
     },
     {
         "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ease_chat_message_list.xml.flat",
-        "source": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_ease_sidebar_background_pressed.xml.flat",
+        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_ease_mm_listitem_grey.xml.flat",
+        "source": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem_grey.xml"
     },
     {
         "merged": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23_abc_tint_switch_track.xml.flat",

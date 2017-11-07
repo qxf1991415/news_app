@@ -29,6 +29,8 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textColorHint="@color/font_title"
+        app:counterEnabled="true"
+        app:counterMaxLength="33"
         >
 
         <android.support.design.widget.TextInputEditText
@@ -53,6 +55,8 @@
         android:textColorHint="@color/font_title"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/font_title"
+        app:counterEnabled="true"
+        app:counterMaxLength="33"
         >
 
         <android.support.design.widget.TextInputEditText
