@@ -23,7 +23,7 @@ public class NewsDataRepository implements NewsDataSource {
     @Override
     public Observable<GetNewsInfo.Response> getNewsList(GetNewsInfo.Request requestValues) {
         NewsReauest request = requestValues.getRequest();
-        return newsApi.getNewsInfoByPageCount(request.getKey(), request.getPage(), request.getRows())
+        return newsApi.getNewsInfoByPageCount(request.getAppid(), request.getPage(), request.getNum(), request.getSecret())
                 .map(new Function<NewsInfo, GetNewsInfo.Response>() {
                          @Override
                          public GetNewsInfo.Response apply(NewsInfo response) throws Exception {

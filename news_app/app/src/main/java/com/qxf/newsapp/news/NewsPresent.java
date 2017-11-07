@@ -2,6 +2,7 @@ package com.qxf.newsapp.news;
 
 import android.content.Context;
 
+import com.qxf.newsapp.base.AppConstant;
 import com.qxf.newsapp.news.net.GetNewsInfo;
 import com.qxf.newsapp.news.net.GetNewsInfo.Request;
 import com.qxf.newsapp.news.net.beans.NewsInfo;
@@ -27,7 +28,7 @@ public class NewsPresent implements NewsContract.Present {
     private GetNewsInfo getNewsInfo;
     private NewsReauest newsReauest = new NewsReauest();
     private int page = 1;
-    private int rows = 20;
+    private int num = 20;
     private CompositeDisposable compositeDisposable;
 
     @Override
@@ -39,7 +40,8 @@ public class NewsPresent implements NewsContract.Present {
         this.newsView = newsView;
         this.context = context;
         this.getNewsInfo = getNewsInfo;
-        newsReauest.setKey("684265f995f94eb2b36380a5f66bf807");
+        newsReauest.setAppid(AppConstant.APP_ID);
+        newsReauest.setSecret(AppConstant.APP_SECRET);
         compositeDisposable = new CompositeDisposable();
     }
 
@@ -50,7 +52,7 @@ public class NewsPresent implements NewsContract.Present {
         } else {
             page = 1;
         }
-        newsReauest.setRows(rows);
+        newsReauest.setNum(num);
         newsReauest.setPage(page);
         return new Request(newsReauest);
     }
@@ -70,7 +72,7 @@ public class NewsPresent implements NewsContract.Present {
 
                     @Override
                     public void onNext(GetNewsInfo.Response response) {
-                        List<NewsInfo.ResultBean> newsInfos = response.getNewsInfo().getResult();
+                        List<NewsInfo.ShowapiResBodyBean.NewslistBean> newsInfos = response.getNewsInfo().getShowapi_res_body().getNewslist();
                         newsView.setData(newsInfos);
                     }
 
@@ -86,12 +88,6 @@ public class NewsPresent implements NewsContract.Present {
                 });
     }
 
-    interface LoadFinish{
-        void LoadEnd();
-    }
-
-
-
     @Override
     public void loadMore() {
         isLoadMore = true;
@@ -101,6 +97,5 @@ public class NewsPresent implements NewsContract.Present {
     @Override
     public void refershNews() {
         isLoadMore = false;
-
     }
 }

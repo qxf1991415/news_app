@@ -6,16 +6,25 @@ package com.qxf.newsapp.news.net.beans;
 
 public class NewsReauest {
 
-    private String key;
+    private String appid;
+    private String secret;
     private int page;
-    private int rows;
+    private int num;
 
-    public String getKey() {
-        return key;
+    public String getAppid() {
+        return appid;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setAppid(String appid) {
+        this.appid = appid;
+    }
+
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 
     public int getPage() {
@@ -26,11 +35,11 @@ public class NewsReauest {
         this.page = page;
     }
 
-    public int getRows() {
-        return rows;
+    public int getNum() {
+        return num;
     }
 
-    public void setRows(int rows) {
-        this.rows = rows;
+    public void setNum(int num) {
+        this.num = num;
     }
 }

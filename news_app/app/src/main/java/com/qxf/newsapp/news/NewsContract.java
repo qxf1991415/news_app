@@ -12,7 +12,7 @@ import java.util.List;
 public interface NewsContract {
 
     interface View extends com.qxf.newsapp.base.BaseView<Present> {
-        void setData(List<NewsInfo.ResultBean> newsInfos );
+        void setData(List<NewsInfo.ShowapiResBodyBean.NewslistBean> newsInfos );
     }
 
     interface Present extends com.qxf.newsapp.base.BasePresenter {

@@ -12,8 +12,10 @@ import retrofit2.http.Query;
 
 public interface NewsApi {
 
-    String BASE_URL = "http://api.avatardata.cn/";
+    String BASE_URL = "http://route.showapi.com/";
 
-    @GET("SportsNews/Query")
-    Observable<NewsInfo> getNewsInfoByPageCount(@Query("key") String key, @Query("page") int page, @Query("rows") int rows);
+    @GET("196-1")
+    Observable<NewsInfo> getNewsInfoByPageCount(@Query("showapi_appid") String appid,
+                                                @Query("page") int page, @Query("num") int rows,
+                                                @Query("showapi_sign") String secret);
 }

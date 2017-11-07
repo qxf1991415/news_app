@@ -8,80 +8,111 @@ import java.util.List;
 
 public class NewsInfo {
 
-    private int error_code;
-    private String reason;
-    private List<ResultBean> result;
+    private int showapi_res_code;
+    private String showapi_res_error;
+    private ShowapiResBodyBean showapi_res_body;
 
-    public int getError_code() {
-        return error_code;
+    public int getShowapi_res_code() {
+        return showapi_res_code;
     }
 
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
+    public void setShowapi_res_code(int showapi_res_code) {
+        this.showapi_res_code = showapi_res_code;
     }
 
-    public String getReason() {
-        return reason;
+    public String getShowapi_res_error() {
+        return showapi_res_error;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setShowapi_res_error(String showapi_res_error) {
+        this.showapi_res_error = showapi_res_error;
     }
 
-    public List<ResultBean> getResult() {
-        return result;
+    public ShowapiResBodyBean getShowapi_res_body() {
+        return showapi_res_body;
     }
 
-    public void setResult(List<ResultBean> result) {
-        this.result = result;
+    public void setShowapi_res_body(ShowapiResBodyBean showapi_res_body) {
+        this.showapi_res_body = showapi_res_body;
     }
 
-    public static class ResultBean {
+    public static class ShowapiResBodyBean {
 
-        private String ctime;
-        private String title;
-        private String description;
-        private String picUrl;
-        private String url;
+        private int code;
+        private String msg;
+        private List<NewslistBean> newslist;
 
-        public String getCtime() {
-            return ctime;
+        public int getCode() {
+            return code;
         }
 
-        public void setCtime(String ctime) {
-            this.ctime = ctime;
+        public void setCode(int code) {
+            this.code = code;
         }
 
-        public String getTitle() {
-            return title;
+        public String getMsg() {
+            return msg;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
+        public void setMsg(String msg) {
+            this.msg = msg;
         }
 
-        public String getDescription() {
-            return description;
+        public List<NewslistBean> getNewslist() {
+            return newslist;
         }
 
-        public void setDescription(String description) {
-            this.description = description;
+        public void setNewslist(List<NewslistBean> newslist) {
+            this.newslist = newslist;
         }
 
-        public String getPicUrl() {
-            return picUrl;
-        }
+        public static class NewslistBean {
 
-        public void setPicUrl(String picUrl) {
-            this.picUrl = picUrl;
-        }
+            private String title;
+            private String picUrl;
+            private String description;
+            private String ctime;
+            private String url;
 
-        public String getUrl() {
-            return url;
-        }
+            public String getTitle() {
+                return title;
+            }
 
-        public void setUrl(String url) {
-            this.url = url;
+            public void setTitle(String title) {
+                this.title = title;
+            }
+
+            public String getPicUrl() {
+                return picUrl;
+            }
+
+            public void setPicUrl(String picUrl) {
+                this.picUrl = picUrl;
+            }
+
+            public String getDescription() {
+                return description;
+            }
+
+            public void setDescription(String description) {
+                this.description = description;
+            }
+
+            public String getCtime() {
+                return ctime;
+            }
+
+            public void setCtime(String ctime) {
+                this.ctime = ctime;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
         }
     }
 }

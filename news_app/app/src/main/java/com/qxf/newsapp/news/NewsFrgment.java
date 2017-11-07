@@ -33,7 +33,7 @@ import butterknife.ButterKnife;
 public class NewsFrgment extends BaseSupportFragment implements NewsContract.View {
     private List<String> images;
     private NewsPresent newsPresent;
-    private List<NewsInfo> newsInfos = new ArrayList<>();
+    private List<NewsInfo.ShowapiResBodyBean.NewslistBean> newsInfoList = new ArrayList<>();
 
     @BindView(R.id.banner)
     Banner banner;
@@ -41,6 +41,7 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     DWRefreshLayout dwRefreshLayout;
     @BindView(R.id.news)
     RecyclerView news;
+    private NewsAdapter newsAdapter;
 
     @Nullable
     @Override
@@ -72,9 +73,12 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     private void initView() {
         initBanner();
         news.setLayoutManager(new LinearLayoutManager(getActivity()));
-        news.setAdapter(new NewsAdapter());
+        newsAdapter = new NewsAdapter(getActivity());
+        newsAdapter.setList(newsInfoList);
+        news.setAdapter(newsAdapter);
         news.setItemAnimator(new DefaultItemAnimator());
         news.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL));
+        newsAdapter.notifyDataSetChanged();
     }
 
     private void initBanner() {
@@ -98,7 +102,8 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     }
 
     @Override
-    public void setData(List<NewsInfo.ResultBean> newsInfos) {
-
+    public void setData(List<NewsInfo.ShowapiResBodyBean.NewslistBean> newsInfos) {
+        newsInfoList.clear();
+        newsInfoList.addAll(newsInfos);
     }
 }
