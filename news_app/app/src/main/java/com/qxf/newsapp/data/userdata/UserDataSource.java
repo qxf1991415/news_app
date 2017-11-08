@@ -10,5 +10,6 @@ public interface UserDataSource {
 
     List<User> getUserInfo(String userName);
     void deleteUserInfo(String userName);
-    void updateUserInfo(String userName);
+    void updateUserInfo(User user);
+    void insertUserInfo(User user);
 }

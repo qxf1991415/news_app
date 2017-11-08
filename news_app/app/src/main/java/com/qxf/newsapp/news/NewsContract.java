@@ -24,5 +24,6 @@ public interface NewsContract {
         void loadMore();
 
         void refershNews();
+
     }
 }

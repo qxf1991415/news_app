@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Android\news_app\news_app\easeui\src\main\assets"/><source path="F:\Android\news_app\news_app\easeui\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\Android\news_app\news_app\easeui\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\news_app\news_app\easeui\src\main\assets"/><source path="E:\news_app\news_app\easeui\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\news_app\news_app\easeui\src\debug\assets"/></dataSet></merger>

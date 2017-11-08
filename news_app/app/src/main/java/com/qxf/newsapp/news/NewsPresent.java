@@ -40,8 +40,6 @@ public class NewsPresent implements NewsContract.Present {
         this.newsView = newsView;
         this.context = context;
         this.getNewsInfo = getNewsInfo;
-        newsReauest.setAppid(AppConstant.APP_ID);
-        newsReauest.setSecret(AppConstant.APP_SECRET);
         compositeDisposable = new CompositeDisposable();
     }
 
@@ -52,6 +50,8 @@ public class NewsPresent implements NewsContract.Present {
         } else {
             page = 1;
         }
+        newsReauest.setAppid(AppConstant.APP_ID);
+        newsReauest.setSecret(AppConstant.APP_SECRET);
         newsReauest.setNum(num);
         newsReauest.setPage(page);
         return new Request(newsReauest);
@@ -59,7 +59,6 @@ public class NewsPresent implements NewsContract.Present {
 
     @Override
     public void getNewsData() {
-        isLoadMore = false;
         getNewsInfo.executeUseCase(initRequest())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
