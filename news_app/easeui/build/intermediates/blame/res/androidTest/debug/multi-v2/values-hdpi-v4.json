@@ -15,22 +15,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "F:\\Android\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\quanxiaofeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\fc592dba86c4e7e52bda626b1476d4f9\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "13",
-                        "endOffsets": "327"
-                    }
-                }
-            ]
         }
     ]
 }

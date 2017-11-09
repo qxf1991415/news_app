@@ -69,10 +69,20 @@
             />
     </android.support.design.widget.TextInputLayout>
 
+    <TextView
+        android:layout_below="@+id/layout_password"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:padding="10dp"
+        android:id="@+id/unpass"
+        android:text="忘记密码？"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_password"
+        android:layout_below="@+id/unpass"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="40dp"

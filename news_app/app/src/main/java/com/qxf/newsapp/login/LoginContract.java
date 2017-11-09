@@ -13,9 +13,12 @@ public interface LoginContract {
 
 
     interface View extends BaseView<Presenter> {
-
+        void getUserInput();
     }
+
     interface Presenter extends BasePresenter {
         void JumpToRegist(Class<? extends Activity> clazz);
+
+        boolean checkUserInfo(String mUserName, String mPassword);
     }
 }

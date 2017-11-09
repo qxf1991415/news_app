@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qxf.newsapp.regist.RegistSucessActivity">
+
+    <TextView
+        android:id="@+id/tv_warn"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:text="@string/regist_sucess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_jump"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_warn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/jump_to_login"
+        android:textSize="24sp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

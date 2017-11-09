@@ -6,8 +6,11 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qxf.newsapp.R;
+import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.main.MainActivity;
 import com.qxf.newsapp.regist.RegistActivity;
 
@@ -30,25 +33,46 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     Button regist;
     @BindView(R.id.login)
     Button login;
+    @BindView(R.id.unpass)
+    TextView unpass;
 
     private LoginPresenter mPresrenter;
+    private String mUserName;
+    private String mPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        mPresrenter = new LoginPresenter(this, this);
+        mPresrenter = new LoginPresenter(this, this, AppInjection.provideUserDataSource());
     }
 
-    @OnClick({R.id.regist, R.id.login})
+    @Override
+    public void getUserInput() {
+        mUserName = user.getText().toString().trim();
+        mPassword = password.getText().toString().trim();
+    }
+
+    @OnClick({R.id.regist, R.id.login, R.id.unpass})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.regist:
                 mPresrenter.JumpToRegist(RegistActivity.class);
                 break;
             case R.id.login:
-                mPresrenter.JumpToRegist(MainActivity.class);
+                getUserInput();
+                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
+                if (checkUserInfo) {
+                    mPresrenter.JumpToRegist(MainActivity.class);
+                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    user.setText("");
+                    password.setText("");
+                }
+                break;
+            case R.id.unpass:
                 break;
         }
     }

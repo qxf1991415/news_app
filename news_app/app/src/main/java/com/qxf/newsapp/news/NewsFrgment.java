@@ -14,7 +14,7 @@ import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.BaseSupportFragment;
 import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.main.MainActivity;
-import com.qxf.newsapp.news.detail.Html5Activity;
+import com.qxf.newsapp.detail.Html5Activity;
 import com.qxf.newsapp.news.net.beans.NewsInfo;
 import com.ufo.dwrefresh.view.DWRefreshLayout;
 

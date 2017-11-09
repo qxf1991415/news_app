@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">newsapp</string>
+    <string name="app_name">新阅</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="tab_a">新闻</string>
     <string name="tab_b">聊天</string>
@@ -7,18 +7,7 @@
     <string name="tab_d">发现</string>
     <string name="tab_e">我的</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_login">Sign in</string>
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="regist_sucess">恭喜您，注册成功！%1$s秒后自动跳转至登录界面或者点击下方按钮立即跳转登录界面！</string>
+    <string name="jumping">正在跳转！</string>
+    <string name="jump_to_login">跳转</string>
 </resources>

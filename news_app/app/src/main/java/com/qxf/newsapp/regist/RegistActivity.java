@@ -5,10 +5,10 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.BaseActivity;
+import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.login.LoginActivity;
 
 import butterknife.BindView;
@@ -44,7 +44,7 @@ public class RegistActivity extends BaseActivity implements RegistContract.View 
         setContentLayout(R.layout.activity_regist);
         ButterKnife.bind(this);
         setTitle("注册账号");
-        registPresenter = new RegistPresenter(this, this);
+        registPresenter = new RegistPresenter(this, this, AppInjection.provideUserDataSource());
         start();
     }
 
@@ -74,22 +74,18 @@ public class RegistActivity extends BaseActivity implements RegistContract.View 
                 registPresenter.JumpToRegist(LoginActivity.class);
                 break;
             case R.id.ok_regist:
-                checkUserInfo();
-                registPresenter.JumpToRegist(LoginActivity.class);
+                inintUserInfo();
+                boolean checkUserInfo = registPresenter.checkUserInfo(mUserName, mPassword, mRePassword);
+                if(checkUserInfo){
+                    registPresenter.registUser(mUserName, mPassword);
+                }else{
+                    user.setText("");
+                    password.setText("");
+                    rePassword.setText("");
+                }
+
                 break;
         }
     }
 
-    private void checkUserInfo() {
-        if (mUserName.length() <= 0 || mPassword.length() <= 0) {
-            Toast.makeText(this, "用户名密码不能为空！", Toast.LENGTH_LONG);
-            return;
-        } else if (mRePassword.length() <= 0) {
-            Toast.makeText(this, "请确认密码！", Toast.LENGTH_LONG);
-            return;
-        } else if (!mRePassword.equals(mPassword)) {
-            Toast.makeText(this, "两次输入密码不一致，请确认密码！", Toast.LENGTH_LONG);
-            return;
-        }
-    }
 }

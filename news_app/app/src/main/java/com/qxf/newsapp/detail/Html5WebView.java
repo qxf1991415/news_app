@@ -1,4 +1,4 @@
-package com.qxf.newsapp.news.detail;
+package com.qxf.newsapp.detail;
 
 import android.content.Context;
 import android.graphics.Bitmap;

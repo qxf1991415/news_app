@@ -21,7 +21,7 @@ public class UserDbHelper extends SQLiteOpenHelper implements UserDataConstant {
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
-                    USER_NAME_ID + BOOLEAN_TYPE + " PRIMARY KEY NOT NULL AUTO_INCREMENT" + COMMA_SEP +
+                    USER_NAME_ID + BOOLEAN_TYPE + " PRIMARY KEY NOT NULL" + COMMA_SEP +
                     USER_NAME + TEXT_TYPE + " NOT NULL" + COMMA_SEP +
                     USER_PASSWORD + TEXT_TYPE + " NOT NULL" +
                     " )";
