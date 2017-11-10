@@ -82,9 +82,9 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         HeaderViewHolder headerViewHolder = (HeaderViewHolder) holder;
         Banner banner = headerViewHolder.banner;
         images = new ArrayList<>();
-        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114150030_0003.png");
-        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145642_5831.png");
-        images.add("http://mob.qipintong.com/assets/js/kindeditor/attached/image/20161114/20161114145705_0472.png");
+        images.add("http://otmfrej7w.bkt.clouddn.com/1.png");
+        images.add("http://otmfrej7w.bkt.clouddn.com/2.png");
+        images.add("http://otmfrej7w.bkt.clouddn.com/3.png");
         banner.setImages(images);
         banner.setImageLoader(new GlideImageLoader());
         banner.setBannerAnimation(Transformer.Accordion);
