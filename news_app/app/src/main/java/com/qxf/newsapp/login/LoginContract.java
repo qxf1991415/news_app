@@ -17,7 +17,7 @@ public interface LoginContract {
     }
 
     interface Presenter extends BasePresenter {
-        void JumpToRegist(Class<? extends Activity> clazz);
+        void JumpToRegist(Class<? extends Activity> clazz, boolean finish);
 
         boolean checkUserInfo(String mUserName, String mPassword);
     }

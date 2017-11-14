@@ -57,21 +57,21 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.regist:
-                mPresrenter.JumpToRegist(RegistActivity.class);
+                mPresrenter.JumpToRegist(RegistActivity.class, false);
                 break;
             case R.id.login:
                 // TODO: 2017/11/14 屏蔽登陆逻辑，直接跳转
 //                getUserInput();
 //                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
 //                if (checkUserInfo) {
-//                    mPresrenter.JumpToRegist(MainActivity.class);
+//                    mPresrenter.JumpToRegist(MainActivity.class, true);
 //                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
 //                    finish();
 //                } else {
 //                    user.setText("");
 //                    password.setText("");
 //                }
-                mPresrenter.JumpToRegist(MainActivity.class);
+                mPresrenter.JumpToRegist(MainActivity.class, true);
                 break;
             case R.id.unpass:
                 break;

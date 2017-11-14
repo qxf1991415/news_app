@@ -30,10 +30,12 @@ public class LoginPresenter implements LoginContract.Presenter {
     }
 
     @Override
-    public void JumpToRegist(Class<? extends Activity> clazz) {
+    public void JumpToRegist(Class<? extends Activity> clazz, boolean finish) {
         Intent intent = new Intent(activity, clazz);
         activity.startActivity(intent);
-        activity.finish();
+        if (finish) {
+            activity.finish();
+        }
     }
 
     @Override
