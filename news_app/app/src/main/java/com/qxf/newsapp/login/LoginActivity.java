@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.data.AppInjection;
@@ -61,16 +60,18 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                 mPresrenter.JumpToRegist(RegistActivity.class);
                 break;
             case R.id.login:
-                getUserInput();
-                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
-                if (checkUserInfo) {
-                    mPresrenter.JumpToRegist(MainActivity.class);
-                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
-                    finish();
-                } else {
-                    user.setText("");
-                    password.setText("");
-                }
+                // TODO: 2017/11/14 屏蔽登陆逻辑，直接跳转
+//                getUserInput();
+//                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
+//                if (checkUserInfo) {
+//                    mPresrenter.JumpToRegist(MainActivity.class);
+//                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
+//                    finish();
+//                } else {
+//                    user.setText("");
+//                    password.setText("");
+//                }
+                mPresrenter.JumpToRegist(MainActivity.class);
                 break;
             case R.id.unpass:
                 break;

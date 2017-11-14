@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/index_tab_a"
+            android:title="新闻"/>
+        <item
+            android:id="@+id/nav_talk"
+            android:icon="@drawable/index_tab_b"
+            android:title="聊天"/>
+        <item
+            android:id="@+id/nav_frends"
+            android:icon="@drawable/index_tab_c"
+            android:title="通讯录"/>
+        <item
+            android:id="@+id/nav_find"
+            android:icon="@drawable/index_tab_d"
+            android:title="发现"/>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/index_tab_e"
+            android:title="我的"/>
+    </group>
+
+    <item android:title="工具">
+        <menu>
+            <item
+                android:id="@+id/nav_set"
+                android:title="设置"/>
+        </menu>
+    </item>
+</menu>

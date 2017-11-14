@@ -10,4 +10,6 @@
     <string name="regist_sucess">恭喜您，注册成功！%1$s秒后自动跳转至登录界面或者点击下方按钮立即跳转登录界面！</string>
     <string name="jumping">正在跳转！</string>
     <string name="jump_to_login">跳转</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
 </resources>

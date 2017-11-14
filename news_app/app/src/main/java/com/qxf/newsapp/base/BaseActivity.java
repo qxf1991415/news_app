@@ -23,7 +23,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 通用的ToolBar
      */
-    private Toolbar commonTitleTb;
+    public Toolbar commonTitleTb;
     /**
      * 内容区域
      */
@@ -39,9 +39,9 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void initView() {
-        commonTitleTv = (TextView) findViewById(R.id.common_title_tv);
-        commonTitleTb = (Toolbar) findViewById(R.id.common_title_tb);
-        content = (FrameLayout) findViewById(R.id.content);
+        commonTitleTv = findViewById(R.id.common_title_tv);
+        commonTitleTb = findViewById(R.id.common_title_tb);
+        content = findViewById(R.id.content);
     }
 
 

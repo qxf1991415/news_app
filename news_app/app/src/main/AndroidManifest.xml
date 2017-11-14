@@ -98,6 +98,8 @@
 
         <activity android:name=".regist.RegistSucessActivity">
         </activity>
+        <activity android:name=".base.SettingActivity">
+        </activity>
     </application>
 
 </manifest>
