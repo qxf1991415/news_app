@@ -1,5 +1,6 @@
 package com.qxf.newsapp.find.net;
 
+import com.qxf.newsapp.find.net.bean.HealthDetailInfo;
 import com.qxf.newsapp.find.net.bean.HealthListInfo;
 import com.qxf.newsapp.find.net.bean.HealthSearchInfo;
 
@@ -27,7 +28,7 @@ public interface HealthApi {
                                                      @Query("page") String page);
 
     @GET("90-88")
-    Observable<HealthSearchInfo> getHealthDetailInfo(@Query("showapi_appid") String appid,
+    Observable<HealthDetailInfo> getHealthDetailInfo(@Query("showapi_appid") String appid,
                                                      @Query("showapi_sign") String secret,
                                                      @Query("id") String id);
 }

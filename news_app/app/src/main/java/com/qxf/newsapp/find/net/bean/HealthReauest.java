@@ -11,6 +11,7 @@ public class HealthReauest {
     private String tid;
     private String key;
     private String page;
+    private String id;
 
     public String getAppid() {
         return appid;
@@ -50,5 +51,13 @@ public class HealthReauest {
 
     public void setPage(String page) {
         this.page = page;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

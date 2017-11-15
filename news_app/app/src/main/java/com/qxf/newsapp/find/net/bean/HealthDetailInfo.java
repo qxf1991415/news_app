@@ -6,143 +6,174 @@ package com.qxf.newsapp.find.net.bean;
 
 public class HealthDetailInfo {
 
-    private ItemBean item;
-    private int ret_code;
+    private int showapi_res_code;
+    private String showapi_res_error;
+    private ShowapiResBodyBean showapi_res_body;
 
-    public ItemBean getItem() {
-        return item;
+    public int getShowapi_res_code() {
+        return showapi_res_code;
     }
 
-    public void setItem(ItemBean item) {
-        this.item = item;
+    public void setShowapi_res_code(int showapi_res_code) {
+        this.showapi_res_code = showapi_res_code;
     }
 
-    public int getRet_code() {
-        return ret_code;
+    public String getShowapi_res_error() {
+        return showapi_res_error;
     }
 
-    public void setRet_code(int ret_code) {
-        this.ret_code = ret_code;
+    public void setShowapi_res_error(String showapi_res_error) {
+        this.showapi_res_error = showapi_res_error;
     }
 
-    public static class ItemBean {
+    public ShowapiResBodyBean getShowapi_res_body() {
+        return showapi_res_body;
+    }
 
-        private String content;
-        private String ctime;
-        private String id;
-        private String img;
-        private String intro;
-        private String keywords;
-        private String media_name;
-        private String stitle;
-        private String summary;
-        private String tid;
-        private String title;
-        private String tname;
-        private String wapurl;
+    public void setShowapi_res_body(ShowapiResBodyBean showapi_res_body) {
+        this.showapi_res_body = showapi_res_body;
+    }
 
-        public String getContent() {
-            return content;
+    public static class ShowapiResBodyBean {
+
+        private ItemBean item;
+        private int ret_code;
+
+        public ItemBean getItem() {
+            return item;
         }
 
-        public void setContent(String content) {
-            this.content = content;
+        public void setItem(ItemBean item) {
+            this.item = item;
         }
 
-        public String getCtime() {
-            return ctime;
+        public int getRet_code() {
+            return ret_code;
         }
 
-        public void setCtime(String ctime) {
-            this.ctime = ctime;
+        public void setRet_code(int ret_code) {
+            this.ret_code = ret_code;
         }
 
-        public String getId() {
-            return id;
-        }
+        public static class ItemBean {
 
-        public void setId(String id) {
-            this.id = id;
-        }
+            private String content;
+            private String ctime;
+            private String id;
+            private String img;
+            private String intro;
+            private String keywords;
+            private String media_name;
+            private String stitle;
+            private String summary;
+            private String tid;
+            private String title;
+            private String tname;
+            private String wapurl;
 
-        public String getImg() {
-            return img;
-        }
+            public String getContent() {
+                return content;
+            }
 
-        public void setImg(String img) {
-            this.img = img;
-        }
+            public void setContent(String content) {
+                this.content = content;
+            }
 
-        public String getIntro() {
-            return intro;
-        }
+            public String getCtime() {
+                return ctime;
+            }
 
-        public void setIntro(String intro) {
-            this.intro = intro;
-        }
+            public void setCtime(String ctime) {
+                this.ctime = ctime;
+            }
 
-        public String getKeywords() {
-            return keywords;
-        }
+            public String getId() {
+                return id;
+            }
 
-        public void setKeywords(String keywords) {
-            this.keywords = keywords;
-        }
+            public void setId(String id) {
+                this.id = id;
+            }
 
-        public String getMedia_name() {
-            return media_name;
-        }
+            public String getImg() {
+                return img;
+            }
 
-        public void setMedia_name(String media_name) {
-            this.media_name = media_name;
-        }
+            public void setImg(String img) {
+                this.img = img;
+            }
 
-        public String getStitle() {
-            return stitle;
-        }
+            public String getIntro() {
+                return intro;
+            }
 
-        public void setStitle(String stitle) {
-            this.stitle = stitle;
-        }
+            public void setIntro(String intro) {
+                this.intro = intro;
+            }
 
-        public String getSummary() {
-            return summary;
-        }
+            public String getKeywords() {
+                return keywords;
+            }
 
-        public void setSummary(String summary) {
-            this.summary = summary;
-        }
+            public void setKeywords(String keywords) {
+                this.keywords = keywords;
+            }
 
-        public String getTid() {
-            return tid;
-        }
+            public String getMedia_name() {
+                return media_name;
+            }
 
-        public void setTid(String tid) {
-            this.tid = tid;
-        }
+            public void setMedia_name(String media_name) {
+                this.media_name = media_name;
+            }
 
-        public String getTitle() {
-            return title;
-        }
+            public String getStitle() {
+                return stitle;
+            }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
+            public void setStitle(String stitle) {
+                this.stitle = stitle;
+            }
 
-        public String getTname() {
-            return tname;
-        }
+            public String getSummary() {
+                return summary;
+            }
 
-        public void setTname(String tname) {
-            this.tname = tname;
-        }
+            public void setSummary(String summary) {
+                this.summary = summary;
+            }
 
-        public String getWapurl() {
-            return wapurl;
-        }
+            public String getTid() {
+                return tid;
+            }
 
-        public void setWapurl(String wapurl) {
-            this.wapurl = wapurl;
+            public void setTid(String tid) {
+                this.tid = tid;
+            }
+
+            public String getTitle() {
+                return title;
+            }
+
+            public void setTitle(String title) {
+                this.title = title;
+            }
+
+            public String getTname() {
+                return tname;
+            }
+
+            public void setTname(String tname) {
+                this.tname = tname;
+            }
+
+            public String getWapurl() {
+                return wapurl;
+            }
+
+            public void setWapurl(String wapurl) {
+                this.wapurl = wapurl;
+            }
         }
     }
 }

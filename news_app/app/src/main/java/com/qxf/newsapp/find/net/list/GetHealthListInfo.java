@@ -10,11 +10,17 @@ import io.reactivex.Observable;
  * Created by Administrator on 2017/11/9.
  */
 
-public class GetHealthList extends RxUseCase<GetHealthList.Request, GetHealthList.Response> {
+public class GetHealthListInfo extends RxUseCase<GetHealthListInfo.Request, GetHealthListInfo.Response> {
+
+    private HealthDataSource healthDataSource;
+
+    public GetHealthListInfo(HealthDataSource healthDataSource) {
+        this.healthDataSource = healthDataSource;
+    }
 
     @Override
     protected Observable<Response> buildUseCaseObservable(Request requestValues) {
-        return null;
+        return healthDataSource.getHealthList(requestValues);
     }
 
     public static class Request implements RxUseCase.RequestValues{
