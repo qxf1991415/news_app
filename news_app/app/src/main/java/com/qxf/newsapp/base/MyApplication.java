@@ -6,6 +6,8 @@ import android.content.Context;
 
 import com.github.clientcloud.APPCloud;
 import com.github.clientcloud.ApiServer;
+import com.hyphenate.chat.EMOptions;
+import com.hyphenate.easeui.EaseUI;
 import com.qxf.newsapp.utils.CommonUtils;
 import com.qxf.newsapp.utils.CommonUtilsLoader;
 
@@ -31,6 +33,14 @@ public class MyApplication extends Application {
         if (getPackageName().equals(getProcessName(this, android.os.Process.myPid()))) {
             initCommonponent();
         }
+
+        initHuanXin();
+    }
+
+    private void initHuanXin() {
+        EMOptions options = new EMOptions();
+        options.setAcceptInvitationAlways(false);
+        EaseUI.getInstance().init(getContext(), options);
     }
 
     private void initCommonponent() {

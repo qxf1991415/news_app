@@ -7,4 +7,10 @@ import com.hyphenate.easeui.ui.EaseContactListFragment;
  */
 
 public class FrendsFrgment extends EaseContactListFragment {
+
+    @Override
+    protected void initView() {
+        super.initView();
+        hideTitleBar();
+    }
 }

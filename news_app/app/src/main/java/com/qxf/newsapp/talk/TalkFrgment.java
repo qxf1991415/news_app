@@ -7,4 +7,9 @@ import com.hyphenate.easeui.ui.EaseConversationListFragment;
  */
 
 public class TalkFrgment extends EaseConversationListFragment {
+    @Override
+    protected void initView() {
+        super.initView();
+        hideTitleBar();
+    }
 }

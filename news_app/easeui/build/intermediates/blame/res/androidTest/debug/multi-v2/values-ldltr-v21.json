@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/easeui/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "/home/qxf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.1.aar/f7cb5512da9690b025541b5f346b4ad0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/qxf/Android_APP/news_app/news_app/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

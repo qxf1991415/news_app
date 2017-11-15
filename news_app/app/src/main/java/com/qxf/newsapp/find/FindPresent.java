@@ -133,6 +133,7 @@ public class FindPresent implements FindContract.Present {
                     public void onNext(GetHealthSearchInfo.Response response) {
                         if (AUTO_SEARCH == tag) {
                             pagebean = response.getHealthSearchInfo().getShowapi_res_body().getPagebean();
+                            List<ContentlistBean> contentlist = pagebean.getContentlist();
                         } else {
 
                         }
