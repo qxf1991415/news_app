@@ -8,13 +8,11 @@
 
     <!-- Toolbar主题设置-->
     <style name="ToolBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
-        <item name="android:textColorSecondary">#ffffff</item>
-        <item name="android:colorBackground">@color/colorPrimary</item>
-        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
-    </style>
-    <!--修改toolbar弹出菜单的位置-->
-    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
-        <!--把该属性改为false即可使menu位置位于toolbar之下-->
+        <!--设置背景-->
+        <item name="android:background">@color/colorPrimary</item>
+        <!--设置字体颜色-->
+        <item name="android:textColor">@android:color/white</item>
+        <!--设置不覆盖锚点-->
         <item name="overlapAnchor">false</item>
     </style>
 
@@ -33,4 +31,9 @@
         <item name="android:textColor">@color/index_tab_tv_sel</item>
     </style>
 
+    <style name="CustomAlertDialog">
+        <item name="android:windowBackground">@drawable/alertdialog_window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

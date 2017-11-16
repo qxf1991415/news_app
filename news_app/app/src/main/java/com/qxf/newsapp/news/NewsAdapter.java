@@ -74,7 +74,11 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         normalViewHolder.tvTitle.setText(newslistBean.getTitle());
         normalViewHolder.tvNews.setText("体育新闻");
         normalViewHolder.tvTime.setText(newslistBean.getCtime());
-        Glide.with(context).load(newslistBean.getPicUrl()).into(normalViewHolder.ivNews);
+        Glide.with(context)
+                .load(newslistBean.getPicUrl())
+                .thumbnail(0.1f)
+                .placeholder(R.mipmap.ic_launcher)
+                .into(normalViewHolder.ivNews);
         normalViewHolder.itemView.setTag(position);
     }
 

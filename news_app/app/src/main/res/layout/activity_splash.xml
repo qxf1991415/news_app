@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/splash"/>
+
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="wrap_content"
@@ -12,21 +18,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_margin="20dp"
+        android:padding="10dp"
         android:background="@drawable/oval_shape"
         android:gravity="center"/>
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="20dp"
-        android:background="@drawable/shape_bg"
-        android:gravity="center"
-        android:text="点击跳转"
-        android:textSize="18sp"
-        />
-
 
 </RelativeLayout>

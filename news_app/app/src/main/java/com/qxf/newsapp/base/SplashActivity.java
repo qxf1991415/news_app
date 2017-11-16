@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.qxf.newsapp.R;
@@ -15,7 +14,6 @@ import com.qxf.newsapp.login.LoginActivity;
 public class SplashActivity extends Activity {
     private TextView tv_time;
     private MyCountDownTimer mc;
-    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +21,13 @@ public class SplashActivity extends Activity {
         //设置Activity为全屏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //去标题状态栏
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
 
         tv_time = (TextView) findViewById(R.id.tv_time);
-        btn = (Button) findViewById(R.id.btn);
         mc = new MyCountDownTimer(6000, 1000);
         mc.start();
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        tv_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startMainActivity();
@@ -63,7 +58,7 @@ public class SplashActivity extends Activity {
         }
 
         public void onTick(long millisUntilFinished) {
-            tv_time.setText(millisUntilFinished / 1000 +"");
+            tv_time.setText(millisUntilFinished / 1000 +" | 跳过");
         }
     }
 

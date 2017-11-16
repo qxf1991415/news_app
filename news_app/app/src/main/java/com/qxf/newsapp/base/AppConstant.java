@@ -7,4 +7,6 @@ package com.qxf.newsapp.base;
 public interface AppConstant {
     String APP_ID = "49502";
     String APP_SECRET = "a73e59f2458644de816a0361c1175fbb";
+
+    String USER_PHOTO = "userphoto";
 }
