@@ -7,11 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qxf.newsapp.R;
+import com.qxf.newsapp.base.AppConstant;
 import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.main.MainActivity;
 import com.qxf.newsapp.regist.RegistActivity;
+import com.qxf.newsapp.utils.SPUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,16 +64,18 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                 break;
             case R.id.login:
                 // TODO: 2017/11/14 屏蔽登陆逻辑，直接跳转
-//                getUserInput();
-//                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
-//                if (checkUserInfo) {
-//                    mPresrenter.JumpToRegist(MainActivity.class, true);
-//                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
-//                    finish();
-//                } else {
-//                    user.setText("");
-//                    password.setText("");
-//                }
+                getUserInput();
+                boolean checkUserInfo = mPresrenter.checkUserInfo(mUserName, mPassword);
+                if (checkUserInfo) {
+                    mPresrenter.JumpToRegist(MainActivity.class, true);
+                    SPUtils.getInstance().put(AppConstant.USER_NAME, mUserName);
+                    SPUtils.getInstance().put(AppConstant.PASSWORD, mPassword);
+                    Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    user.setText("");
+                    password.setText("");
+                }
                 mPresrenter.JumpToRegist(MainActivity.class, true);
                 break;
             case R.id.unpass:

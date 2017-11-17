@@ -34,6 +34,7 @@
 
     //调用相机
     <uses-permission android:name="android.permission.android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name=".base.MyApplication"
@@ -63,6 +64,7 @@
             android:label="@string/app_name">
         </activity>
 
+        //Android7.0以上使用其他程序文件uri配置
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.qxf.newsapp.fileprovider"
@@ -72,6 +74,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths"/>
         </provider>
+
+        //Glide缓存配置
+        <meta-data android:name="com.qxf.newsapp.utils.GlideCache"
+                   android:value="GlideCache"/>
+
+
 
         <!-- 设置环信应用的appkey -->
         <meta-data

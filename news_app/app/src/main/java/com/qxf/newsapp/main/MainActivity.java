@@ -31,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.AppConstant;
 import com.qxf.newsapp.base.BaseActivity;
@@ -47,6 +48,7 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
@@ -119,8 +121,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void initUserPhoto() {
+        String path = getExternalCacheDir() + "/CachePhoto";
+        String fileName = SPUtils.getInstance().getString(AppConstant.USER_PHOTO_GET, "");
+        File file = new File(path, fileName);
         Glide.with(this)
-                .load(imageUri)
+                .load(file)
                 .thumbnail(0.1f)
                 .placeholder(R.mipmap.ic_launcher)
                 .bitmapTransform(new GlideCircleTransform(this))
@@ -403,12 +408,30 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void fromPictureGet() {
-        Glide.with(this)
-                .load("")
-                .thumbnail(0.1f)
-                .placeholder(R.mipmap.ic_launcher)
-                .bitmapTransform(new GlideCircleTransform(this))
-                .into(userPhoto);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
+                Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS) != PackageManager.PERMISSION_GRANTED) {
+            requestWritePermission();
+        } else {
+            getPhoto();
+        }
+    }
+
+    private void requestWritePermission() {
+        RxPermissions rxPermissions = new RxPermissions(this);
+        rxPermissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS)
+                .subscribe(granted -> {
+                    if (granted) {
+                        getPhoto();
+                    } else {
+                    }
+                });
+    }
+
+    private void getPhoto() {
+        Intent intent = new Intent("android.intent.action.GET_CONTENT");
+        intent.setType("image/*");
+        startActivityForResult(intent, CHOOSE_PICTURE);
     }
 
     private void takePhotoGet() {
@@ -430,7 +453,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             imageUri = Uri.fromFile(userImage);
         }
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
+                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
+                Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS) != PackageManager.PERMISSION_GRANTED) {
             requestCameraPermission();
         } else {
             startCarma();
@@ -446,7 +470,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void requestCameraPermission() {
         RxPermissions rxPermissions = new RxPermissions(this);
-        rxPermissions.request(Manifest.permission.CAMERA)
+        rxPermissions.request(Manifest.permission.CAMERA, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS)
                 .subscribe(granted -> {
                     if (granted) {
                         startCarma();
@@ -510,18 +534,47 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Bundle extras = data.getExtras();
         if (extras != null) {
             Bitmap photo = extras.getParcelable("data");
-
             //Glide要加载bitmap，需要先把bitmap转化为byte，不能直接加载
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             photo.compress(Bitmap.CompressFormat.PNG, 100, baos);
             byte[] bytes = baos.toByteArray();
-
+            writeToFile(photo);
             Glide.with(MainActivity.this)
-                    .load(imageUri)
+                    .load(bytes)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .thumbnail(0.1f)
                     .placeholder(R.mipmap.ic_launcher)
                     .bitmapTransform(new GlideCircleTransform(this))
                     .into(userPhoto);
+        }
+    }
+
+    private void writeToFile(Bitmap photo) {
+        FileOutputStream fileOutputStream = null;
+        try {
+            String path = getExternalCacheDir() + "/CachePhoto";
+            String oldFileName = SPUtils.getInstance().getString(AppConstant.USER_PHOTO_GET);
+            if (!"".equals(oldFileName)) {
+                new File(path, oldFileName).delete();
+            }
+            String fileNmae = System.currentTimeMillis() + ".png";
+            SPUtils.getInstance().put(AppConstant.USER_PHOTO_GET, fileNmae);
+            File file = new File(path, fileNmae);
+            if (!file.exists()) {
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+            }
+            fileOutputStream = new FileOutputStream(file);
+            photo.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            fileOutputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fileOutputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
