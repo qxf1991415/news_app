@@ -29,5 +29,7 @@ public interface RegistContract {
 
         void registUser(String mUserName, String mPassword);
 
+        void initHuanXinAccount(String mUserName, String mPassword);
+
     }
 }

@@ -41,6 +41,7 @@ import com.qxf.newsapp.frends.FrendsFrgment;
 import com.qxf.newsapp.home.HomeFrgment;
 import com.qxf.newsapp.news.NewsFrgment;
 import com.qxf.newsapp.talk.TalkFrgment;
+import com.qxf.newsapp.talk.TalkListFrgment;
 import com.qxf.newsapp.utils.GlideCircleTransform;
 import com.qxf.newsapp.utils.SPUtils;
 import com.qxf.newsapp.widget.MAlertDialog;
@@ -81,7 +82,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     NavigationView mNavigationView;
 
     private NewsFrgment fragmentNews;
-    private TalkFrgment fragmentTalk;
+    private TalkListFrgment fragmentTalkList;
     private FrendsFrgment fragmentFrends;
     private FindFrgment fragmentFind;
     private HomeFrgment fragmentHome;
@@ -101,7 +102,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setToolBarMenuOnclick(new mainToolBarMenuClick());
         ButterKnife.bind(this);
         initView1();
+        //创建返回键，并实现打开关/闭监听
+        drawerToggleListen();
+        //mNavigationView点击监听
         navigationViewListen();
+    }
+
+    private void drawerToggleListen() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, commonTitleTb, R.string.open, R.string.close) {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                Toast.makeText(MainActivity.this, "打开了", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                Toast.makeText(MainActivity.this, "关闭了", Toast.LENGTH_SHORT).show();
+            }
+        };
+        mDrawerToggle.syncState();
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
     private void initView1() {
@@ -291,11 +313,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
      */
     private void changeTabToFragmentB(FragmentTransaction transaction) {
         setTitle(R.string.tab_b);
-        if (fragmentTalk == null) {
-            fragmentTalk = new TalkFrgment();
-            transaction.add(R.id.index_content_fl, fragmentTalk);
+        if (fragmentTalkList == null) {
+            fragmentTalkList = new TalkListFrgment();
+            transaction.add(R.id.index_content_fl, fragmentTalkList);
         } else {
-            transaction.show(fragmentTalk);
+            transaction.show(fragmentTalkList);
         }
 
     }
@@ -343,8 +365,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (fragmentNews != null && !fragmentNews.isHidden()) {
             transaction.hide(fragmentNews);
         }
-        if (fragmentTalk != null && !fragmentTalk.isHidden()) {
-            transaction.hide(fragmentTalk);
+        if (fragmentTalkList != null && !fragmentTalkList.isHidden()) {
+            transaction.hide(fragmentTalkList);
         }
         if (fragmentFrends != null && !fragmentFrends.isHidden()) {
             transaction.hide(fragmentFrends);

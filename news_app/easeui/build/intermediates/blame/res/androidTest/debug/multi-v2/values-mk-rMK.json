@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-mk-rMK\\values-mk-rMK.xml",
+                    "source": "/home/qxf/Android_APP/news_app/news_app/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-mk-rMK\\values-mk-rMK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
             "map": [
                 {
-                    "source": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-mk-rMK\\values-mk-rMK.xml",
+                    "source": "/home/qxf/Android_APP/news_app/news_app/E:\\home\\qxf\\Android_APP\\news_app\\news_app\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-mk-rMK\\values-mk-rMK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -31,10 +31,25 @@
             ]
         },
         {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/easeui/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-mk-rMK/values-mk-rMK.xml",
             "map": [
                 {
-                    "source": "E:\\home\\qxf\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\f7cb5512da9690b025541b5f346b4ad0\\res\\values-mk-rMK\\values-mk-rMK.xml",
+                    "source": "/home/qxf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.1.aar/f7cb5512da9690b025541b5f346b4ad0/res/values-mk-rMK/values-mk-rMK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,163,286,390,498,584,689,808,891,973,1060,1166,1273,1374,1481,1592,1696,1794,1878",
+                        "endColumns": "107,122,103,107,85,104,118,82,81,86,105,106,100,106,110,103,97,83,100",
+                        "endOffsets": "158,281,385,493,579,684,803,886,968,1055,1161,1268,1369,1476,1587,1691,1789,1873,1974"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/qxf/Android_APP/news_app/news_app/E:\\home\\qxf\\Android_APP\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mk-rMK\\values-mk-rMK.xml",
+            "map": [
+                {
+                    "source": "/home/qxf/Android_APP/news_app/news_app/E:\\home\\qxf\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\f7cb5512da9690b025541b5f346b4ad0\\res\\values-mk-rMK\\values-mk-rMK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

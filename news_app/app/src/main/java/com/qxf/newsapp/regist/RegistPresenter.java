@@ -1,13 +1,19 @@
 package com.qxf.newsapp.regist;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.hyphenate.EMError;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
+import com.qxf.newsapp.R;
 import com.qxf.newsapp.data.userdata.User;
 import com.qxf.newsapp.data.userdata.UserDataSource;
 
@@ -88,6 +94,51 @@ public class RegistPresenter implements RegistContract.Presenter {
         List<User> userInfo = userDataSource.getUserInfo(mUserName);
         User user = new User(mUserName, mPassword);
         userDataSource.insertUserInfo(user);
-        JumpToRegist(RegistSucessActivity.class);
+    }
+
+    @Override
+    public void initHuanXinAccount(String mUserName, String mPassword) {
+        if (!TextUtils.isEmpty(mUserName) && !TextUtils.isEmpty(mPassword)) {
+            final ProgressDialog pd = new ProgressDialog(activity);
+            pd.setMessage(activity.getResources().getString(R.string.Is_the_registered));
+            pd.show();
+            new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        // call method in SDK
+                        EMClient.getInstance().createAccount(mUserName, mPassword);
+                        activity.runOnUiThread(new Runnable() {
+                            public void run() {
+                                if (!activity.isFinishing())
+                                    pd.dismiss();
+                                // save current user
+                                Toast.makeText(activity, activity.getResources().getString(R.string.Registered_successfully), Toast.LENGTH_SHORT).show();
+                                JumpToRegist(RegistSucessActivity.class);
+                            }
+                        });
+                    } catch (final HyphenateException e) {
+                        activity.runOnUiThread(new Runnable() {
+                            public void run() {
+                                if (!activity.isFinishing())
+                                    pd.dismiss();
+                                int errorCode = e.getErrorCode();
+                                if (errorCode == EMError.NETWORK_ERROR) {
+                                    Toast.makeText(activity, activity.getResources().getString(R.string.network_anomalies), Toast.LENGTH_SHORT).show();
+                                } else if (errorCode == EMError.USER_ALREADY_EXIST) {
+                                    Toast.makeText(activity, activity.getResources().getString(R.string.User_already_exists), Toast.LENGTH_SHORT).show();
+                                } else if (errorCode == EMError.USER_AUTHENTICATION_FAILED) {
+                                    Toast.makeText(activity, activity.getResources().getString(R.string.registration_failed_without_permission), Toast.LENGTH_SHORT).show();
+                                } else if (errorCode == EMError.USER_ILLEGAL_ARGUMENT) {
+                                    Toast.makeText(activity, activity.getResources().getString(R.string.illegal_user_name), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(activity, activity.getResources().getString(R.string.Registration_failed), Toast.LENGTH_SHORT).show();
+                                }
+                                JumpToRegist(RegistSucessActivity.class);
+                            }
+                        });
+                    }
+                }
+            }).start();
+        }
     }
 }

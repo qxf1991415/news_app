@@ -1,11 +1,17 @@
 package com.qxf.newsapp.regist;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.hyphenate.EMError;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.BaseActivity;
 import com.qxf.newsapp.data.AppInjection;
@@ -76,9 +82,10 @@ public class RegistActivity extends BaseActivity implements RegistContract.View 
             case R.id.ok_regist:
                 inintUserInfo();
                 boolean checkUserInfo = registPresenter.checkUserInfo(mUserName, mPassword, mRePassword);
-                if(checkUserInfo){
+                if (checkUserInfo) {
                     registPresenter.registUser(mUserName, mPassword);
-                }else{
+                    registPresenter.initHuanXinAccount(mUserName, mPassword);
+                } else {
                     user.setText("");
                     password.setText("");
                     rePassword.setText("");
