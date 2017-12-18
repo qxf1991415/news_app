@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml:1:1-4:12
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml:1:1-4:12
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml:1:1-4:12
+ADDED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml:1:1-4:12
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml:1:1-4:12
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml:1:1-4:12
 	package
-		ADDED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml:1:70-100
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
+		ADDED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml:1:70-100
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml:1:11-69
+		ADDED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml:1:11-69
 uses-sdk
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-		ADDED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+		ADDED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-		ADDED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
-		INJECTED from /home/qxf/Android_APP/news_app/news_app/easeui/src/main/AndroidManifest.xml
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+		ADDED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
+		INJECTED from E:\news_app\news_app\easeui\src\main\AndroidManifest.xml
