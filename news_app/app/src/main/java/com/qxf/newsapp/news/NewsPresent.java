@@ -1,7 +1,5 @@
 package com.qxf.newsapp.news;
 
-import android.content.Context;
-
 import com.qxf.newsapp.base.AppConstant;
 import com.qxf.newsapp.news.net.GetNewsInfo;
 import com.qxf.newsapp.news.net.GetNewsInfo.Request;
@@ -10,9 +8,10 @@ import com.qxf.newsapp.news.net.beans.NewsReauest;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
@@ -24,23 +23,20 @@ public class NewsPresent implements NewsContract.Present {
 
     private boolean isLoadMore = false;
     private NewsContract.View newsView;
-    private Context context;
     private GetNewsInfo getNewsInfo;
     private NewsReauest newsReauest = new NewsReauest();
     private int page = 1;
     private int num = 20;
-    private CompositeDisposable compositeDisposable;
 
     @Override
     public void start() {
 
     }
 
-    public NewsPresent(NewsContract.View newsView, Context context, GetNewsInfo getNewsInfo) {
+    @Inject
+    public NewsPresent(NewsContract.View newsView, GetNewsInfo getNewsInfo) {
         this.newsView = newsView;
-        this.context = context;
         this.getNewsInfo = getNewsInfo;
-        compositeDisposable = new CompositeDisposable();
     }
 
     @Override
@@ -66,7 +62,6 @@ public class NewsPresent implements NewsContract.Present {
 
                     @Override
                     public void onSubscribe(Disposable d) {
-                        compositeDisposable.add(d);
                     }
 
                     @Override

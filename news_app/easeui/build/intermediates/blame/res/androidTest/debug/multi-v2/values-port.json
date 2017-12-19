@@ -14,66 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\home\\qxf\\Android_APP\\news_app\\news_app\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\home\\qxf\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\f7cb5512da9690b025541b5f346b4ad0\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\cbd7de15dea240e0001a9773d63f1ad2\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\home\\qxf\\Android_APP\\news_app\\news_app\\easeui\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\home\\qxf\\Android_APP\\news_app\\news_app\\E:\\home\\qxf\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\f7cb5512da9690b025541b5f346b4ad0\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
         }
     ]
 }

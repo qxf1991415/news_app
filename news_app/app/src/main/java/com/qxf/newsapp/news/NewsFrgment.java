@@ -12,14 +12,15 @@ import android.view.ViewGroup;
 
 import com.qxf.newsapp.R;
 import com.qxf.newsapp.base.BaseSupportFragment;
-import com.qxf.newsapp.data.AppInjection;
-import com.qxf.newsapp.main.MainActivity;
 import com.qxf.newsapp.detail.Html5Activity;
+import com.qxf.newsapp.main.MainActivity;
 import com.qxf.newsapp.news.net.beans.NewsInfo;
 import com.ufo.dwrefresh.view.DWRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,8 +29,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/9/15.
  */
 
-public class NewsFrgment extends BaseSupportFragment implements NewsContract.View , NewsAdapter.OnItemClickListener{
-    private NewsPresent newsPresent;
+public class NewsFrgment extends BaseSupportFragment implements NewsContract.View, NewsAdapter.OnItemClickListener {
     private boolean isLoadMore = false;
     private List<NewsInfo.ShowapiResBodyBean.NewslistBean> newsInfoList = new ArrayList<>();
 
@@ -37,7 +37,18 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     DWRefreshLayout dwRefreshLayout;
     @BindView(R.id.news)
     RecyclerView news;
-    private NewsAdapter newsAdapter;
+    @Inject
+    NewsPresent newsPresent;
+    @Inject
+    NewsAdapter newsAdapter;
+    private NewsComponent mNewsComponent;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initActivityComponent();
+        mNewsComponent.inject(this);
+    }
 
     @Nullable
     @Override
@@ -45,10 +56,15 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         View view = inflater.inflate(R.layout.fragment_news, container, false);
         view.setOnTouchListener(new DontSpillOnTouchListener());
         ButterKnife.bind(this, view);
-        newsPresent = new NewsPresent(this, this.getActivity(), AppInjection.provideGetNewsInfo());
         initData();
         initView();
         return view;
+    }
+
+    private void initActivityComponent() {
+        mNewsComponent = DaggerNewsComponent.builder()
+                .newsModule(new NewsModule(this))
+                .build();
     }
 
     private void initData() {
@@ -76,7 +92,6 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
         newsPresent.refershNews();
         newsPresent.getNewsData();
         news.setLayoutManager(new LinearLayoutManager(getActivity()));
-        newsAdapter = new NewsAdapter(getActivity());
         newsAdapter.setList(newsInfoList);
         news.setAdapter(newsAdapter);
         news.setItemAnimator(new DefaultItemAnimator());
@@ -97,7 +112,7 @@ public class NewsFrgment extends BaseSupportFragment implements NewsContract.Vie
     public void onItemClick(View view, int position) {
         String url = newsInfoList.get(position - 1).getUrl();
         String title = newsInfoList.get(position - 1).getTitle();
-        Intent intent = new Intent((MainActivity)getActivity(), Html5Activity.class);
+        Intent intent = new Intent((MainActivity) getActivity(), Html5Activity.class);
         Bundle bundle = new Bundle();
         bundle.putString("url", url);
         bundle.putString("title", title);

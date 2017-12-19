@@ -19,6 +19,8 @@ import com.youth.banner.Transformer;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.annotations.NonNull;
@@ -36,6 +38,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     private List<String> images;
     private OnItemClickListener onItemClickListener = null;
 
+    @Inject
     public NewsAdapter(Context context) {
         this.context = context;
     }
