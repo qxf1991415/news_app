@@ -1,4 +1,4 @@
-package com.qxf.newsapp.base;
+package com.qxf.newsapp.appli;
 
 /**
  * Created by quanxiaofeng on 2017/11/7.

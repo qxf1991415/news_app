@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qxf.newsapp.R;
-import com.qxf.newsapp.base.AppConstant;
+import com.qxf.newsapp.appli.AppConstant;
 import com.qxf.newsapp.data.AppInjection;
 import com.qxf.newsapp.main.MainActivity;
 import com.qxf.newsapp.regist.RegistActivity;

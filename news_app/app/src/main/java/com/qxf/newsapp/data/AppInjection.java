@@ -1,6 +1,6 @@
 package com.qxf.newsapp.data;
 
-import com.qxf.newsapp.base.MyApplication;
+import com.qxf.newsapp.appli.MyApplication;
 import com.qxf.newsapp.data.userdata.UserDataRepository;
 import com.qxf.newsapp.data.userdata.UserDataSource;
 import com.qxf.newsapp.find.net.list.GetHealthDetailInfo;

@@ -3,7 +3,7 @@ package com.qxf.newsapp.find;
 import android.content.Context;
 import android.support.design.widget.TabLayout;
 
-import com.qxf.newsapp.base.AppConstant;
+import com.qxf.newsapp.appli.AppConstant;
 import com.qxf.newsapp.find.net.bean.HealthDetailInfo.ShowapiResBodyBean.ItemBean;
 import com.qxf.newsapp.find.net.bean.HealthListInfo;
 import com.qxf.newsapp.find.net.bean.HealthListInfo.ShowapiResBodyBean.ListBean;

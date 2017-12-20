@@ -1,4 +1,4 @@
-package com.qxf.newsapp.base;
+package com.qxf.newsapp.appli;
 
 import android.app.ActivityManager;
 import android.app.Application;

@@ -1,8 +1,11 @@
-package com.qxf.newsapp.news;
+package com.qxf.newsapp.base.di.module;
 
 import android.content.Context;
 
 import com.qxf.newsapp.data.AppInjection;
+import com.qxf.newsapp.news.NewsAdapter;
+import com.qxf.newsapp.news.NewsFrgment;
+import com.qxf.newsapp.news.NewsPresent;
 import com.qxf.newsapp.news.net.GetNewsInfo;
 
 import dagger.Module;

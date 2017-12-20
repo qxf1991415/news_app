@@ -1,8 +1,9 @@
-package com.qxf.newsapp.base;
+package com.qxf.newsapp.setting;
 
 import android.os.Bundle;
 
 import com.qxf.newsapp.R;
+import com.qxf.newsapp.base.BaseActivity;
 
 public class SettingActivity extends BaseActivity {
 

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
-import com.qxf.newsapp.base.MyApplication;
+import com.qxf.newsapp.appli.MyApplication;
 
 import java.util.Collections;
 import java.util.HashMap;

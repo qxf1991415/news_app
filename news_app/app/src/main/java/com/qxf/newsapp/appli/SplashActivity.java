@@ -1,4 +1,4 @@
-package com.qxf.newsapp.base;
+package com.qxf.newsapp.appli;
 
 import android.app.Activity;
 import android.content.Intent;

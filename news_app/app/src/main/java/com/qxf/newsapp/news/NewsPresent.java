@@ -1,6 +1,6 @@
 package com.qxf.newsapp.news;
 
-import com.qxf.newsapp.base.AppConstant;
+import com.qxf.newsapp.appli.AppConstant;
 import com.qxf.newsapp.news.net.GetNewsInfo;
 import com.qxf.newsapp.news.net.GetNewsInfo.Request;
 import com.qxf.newsapp.news.net.beans.NewsInfo;
