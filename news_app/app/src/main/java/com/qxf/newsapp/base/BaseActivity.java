@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.qxf.newsapp.R;
+import com.qxf.newsapp.utils.NetUtils;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -36,6 +37,7 @@ public class BaseActivity extends AppCompatActivity {
         initView();
         setSupportActionBar(commonTitleTb);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        NetUtils.isNetworkErrThenShowMsg();
     }
 
     protected void initView() {

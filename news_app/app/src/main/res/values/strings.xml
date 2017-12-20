@@ -6,6 +6,7 @@
     <string name="tab_c">通讯录</string>
     <string name="tab_d">发现</string>
     <string name="tab_e">我的</string>
+    <string name="internet_error">网络异常,请检查网络设置</string>
 
     <string name="regist_sucess">恭喜您，注册成功！%1$s秒后自动跳转至登录界面或者点击下方按钮立即跳转登录界面！</string>
     <string name="jumping">正在跳转！</string>

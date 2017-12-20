@@ -8,6 +8,9 @@ import com.github.clientcloud.APPCloud;
 import com.github.clientcloud.ApiServer;
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.EaseUI;
+import com.qxf.newsapp.base.di.component.ApplicationComponent;
+import com.qxf.newsapp.base.di.component.DaggerApplicationComponent;
+import com.qxf.newsapp.base.di.module.ApplicationModule;
 import com.qxf.newsapp.utils.CommonUtils;
 import com.qxf.newsapp.utils.CommonUtilsLoader;
 
@@ -21,6 +24,7 @@ public class MyApplication extends Application {
 
     private static Context context;
     public static String currentUserNick = "";
+    private ApplicationComponent mApplicationComponent;
 
     public static Context getContext() {
         return context;
@@ -29,13 +33,21 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-//        registerActivityLifecycleCallbacks(activityLifecycleCallbacks);
         context = getApplicationContext();
+        initApplicationComponent();
         if (getPackageName().equals(getProcessName(this, android.os.Process.myPid()))) {
             initCommonponent();
         }
-
         initHuanXin();
+    }
+    private void initApplicationComponent() {
+        mApplicationComponent = DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
+    }
+
+    public ApplicationComponent getApplicationComponent() {
+        return mApplicationComponent;
     }
 
     private void initHuanXin() {
@@ -73,61 +85,4 @@ public class MyApplication extends Application {
         }
         return null;
     }
-
-//    ActivityLifecycleCallbacks activityLifecycleCallbacks = new ActivityLifecycleCallbacks() {
-//
-//        private Toolbar toolbar;
-
-//        @Override
-//        public void onActivityCreated(final Activity activity, Bundle savedInstanceState) {
-//            toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
-//            if (toolbar != null) {
-//                if (activity instanceof AppCompatActivity) {
-//                    ((AppCompatActivity) activity).setSupportActionBar(toolbar);
-//                    ((AppCompatActivity) activity).getSupportActionBar().setDisplayShowTitleEnabled(false);
-//                }
-//            }
-//            if (activity.findViewById(R.id.toolbar_title) != null) {
-//                ((TextView) activity.findViewById(R.id.toolbar_title)).setText(activity.getTitle());
-//            }
-//            if (activity.findViewById(R.id.toolbar_back) != null) {
-//                activity.findViewById(R.id.toolbar_back).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        activity.onBackPressed();
-//                    }
-//                });
-//            }
-//        }
-//
-//        @Override
-//        public void onActivityStarted(Activity activity) {
-//
-//        }
-//
-//        @Override
-//        public void onActivityResumed(Activity activity) {
-//
-//        }
-//
-//        @Override
-//        public void onActivityPaused(Activity activity) {
-//
-//        }
-//
-//        @Override
-//        public void onActivityStopped(Activity activity) {
-//
-//        }
-//
-//        @Override
-//        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-//
-//        }
-//
-//        @Override
-//        public void onActivityDestroyed(Activity activity) {
-//
-//        }
-//    };
 }
