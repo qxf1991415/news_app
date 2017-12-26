@@ -2,7 +2,9 @@ package com.qxf.newsapp.detail;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -47,8 +49,13 @@ public class Html5Activity extends BaseActivity {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);
+            mSeekBar.setVisibility(View.VISIBLE);
             // 顶部显示网页加载进度
             mSeekBar.setProgress(newProgress);
+            Log.e("qxf", newProgress +"");
+            if(newProgress == 100){
+                mSeekBar.setVisibility(View.GONE);
+            }
         }
     }
 

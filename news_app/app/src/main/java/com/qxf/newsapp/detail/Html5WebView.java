@@ -93,7 +93,10 @@ public class Html5WebView extends WebView {
          */
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
+            if(url.startsWith("http:") || url.startsWith("https:") ) {
+                view.loadUrl(url);
+                return true;
+            }
             return true;
         }
     }
